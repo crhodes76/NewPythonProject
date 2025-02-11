@@ -17,11 +17,11 @@ webbrowser.open(the_url)
 
 raw_data = response.text
 print('Raw data from the response:')
-print(raw_data)
+pprint(raw_data)
 
 print('Dictionary data from json.loads:')
 dictionary_data = json.loads(raw_data)
-print(dictionary_data)
+pprint(dictionary_data)
 
 # Generate a new list of repository names
 print('generating a list of repository names')
