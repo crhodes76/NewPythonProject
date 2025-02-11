@@ -29,3 +29,13 @@ repo_names = [repo['name'] for repo in data]
 print('repository names:')
 for name in repo_names:
     print(name)
+    
+#lets do a netflix search with parameters
+URL = 'https://www.youtube.com/search'
+search_term = input('Enter a search term for youtube: ')
+params = {
+    'q': search_term
+}
+response = requests.get(URL, params=params)
+print('The URL:', response.url)
+webbrowser.open(response.url)
